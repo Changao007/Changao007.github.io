@@ -1,0 +1,164 @@
+ <x3d height="600" width="360">
+        <scene>
+               
+            
+               
+           
+
+            
+
+           
+
+              
+
+<Transform DEF="boxTrafo" translation='18.5 0.75 2'>
+                <Shape DEF="boxShape">
+                    <Appearance DEF="boxApp">
+                         <Material diffuseColor="#FFFCFC"></Material>
+                    </Appearance>
+                    <Box size='10 1 5'></Box>
+                </Shape>
+            </Transform>
+
+            <Transform DEF="boxTrafo" translation='16.5 0.75 4.5'>
+                <Shape DEF="boxShape">
+                    <Appearance DEF="boxApp">
+                         <Imagetexture repeatS="true" repeatT="true" url="../texturas/Unemat.png"></Imagetexture>
+                    </Appearance>
+                    <Box size='4 1 0.1'></Box>
+                </Shape>
+            </Transform>
+            <!-- Parte das salas-->
+           
+              
+            
+                <transform translation="5 0 0">
+              <Transform DEF="boxTrafo" translation='-4 0 2'>
+                <Shape DEF="boxShape">
+                    <Appearance DEF="boxApp">
+                        <Material diffuseColor="#FFFCFC"></Material>
+                    </Appearance>
+                    <Box size='25 2.5 5'></Box>
+                </Shape>
+            </Transform>
+
+            <!-- Conteiner com a imagem da unemat-->
+
+          
+            <!-- Muro-->
+
+                <Transform DEF="boxTrafo" translation='-26.3 0 4'>
+                <Shape DEF="boxShape">
+                    <Appearance DEF="boxApp">
+                        <Material diffuseColor="#FFFCFC"></Material>
+                    </Appearance>
+                    <Box size='20 2.5 1'></Box>
+                </Shape>
+            </Transform>
+
+                <Transform DEF="boxTrafo" translation='-36.8 0 -15.5'>
+                <Shape DEF="boxShape">
+                    <Appearance DEF="boxApp">
+                        <Material diffuseColor="#FFFCFC"></Material>
+                    </Appearance>
+                    <Box size='1 2.5 40'></Box>
+                </Shape>
+            </Transform>
+               
+            <!-- Parte das janelas-->
+             <transform translation="5 0 0">   
+                <Transform DEF="boxTrafo" translation='-20 0.3 4.6'>
+               <shape DEF="janela">
+                    <appearance>
+                        <material diffusecolor="0.24 0.35 0.01" transparency="0.5"></material>
+                    </appearance>
+                    <box size="1.7 1.2 0.2"></box>
+                </shape>
+            </Transform>
+
+            <Transform DEF="boxTrafo" translation='-17 0.3 4.6'>
+                  <shape USE="janela"></shape>
+            </Transform>
+   
+                <Transform DEF="boxTrafo" translation='-14 0.3 4.6'>
+                 <shape USE="janela"></shape>
+            </Transform>
+
+ <Transform DEF="boxTrafo" translation='-11 0.3 4.6'>
+                <shape USE="janela"></shape>
+            </Transform>
+
+ <Transform DEF="boxTrafo" translation='-8 0.3 4.6'>
+                 <shape USE="janela"></shape>
+            </Transform>
+            <Transform DEF="boxTrafo" translation='-5 0.3 4.6'>
+                 <shape USE="janela"></shape>
+            </Transform>
+            <Transform DEF="boxTrafo" translation='-2 0.3 4.6'>
+                 <shape USE="janela"></shape>
+            </Transform>
+            <Transform DEF="boxTrafo" translation='1 0.3 4.6'>
+                 <shape USE="janela"></shape>
+            </Transform>
+            </transform>
+            </transform>
+           
+            
+
+
+
+
+<!-- Conteiner do Fundo-->
+
+                <Transform DEF="boxTrafo" translation='3 2 -30'>
+                <Shape DEF="boxShape">
+                    <Appearance DEF="boxApp">
+                        <Material diffuseColor="#FFFCFC"></Material>
+                    </Appearance>
+                    <Box size='15 6 5'></Box>
+                </Shape>
+            </Transform>
+
+<!-- Parte do Chão de Cimento do fundo-->
+
+            <Transform DEF="boxTrafo" translation='10 -1 -20'>
+                <Shape DEF="boxShape">
+                    <Appearance DEF="boxApp">
+                        <Material diffuseColor="#808080"></Material>
+                    </Appearance>
+                    <Box size='25 0.1 10'></Box>
+                </Shape>
+            </Transform>
+
+<!--Pilar parte lateral
+                <transform translation="7 0 9.2">
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="0.5 5 0.2"></box>
+                    </shape>
+                </transform>
+
+                <transform translation="7 1.7 9.2" >
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="2 0.5 0.2"></box>
+                    </shape>
+                </transform>
+
+                <transform translation="7 1.2 9.2" rotation="0 0 1 2.355">
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="1 0.4 0"></material>
+                        </appearance>
+                        <box size="1 0.5 0.2"></box>
+                    </shape>
+                </transform> -->
+                <transform translation="-29 -1.38 26" scale='0.47 0.4 0.4'>
+                    <inline url="../componentes/estacionamentoc.x3d"></inline>
+                </transform>
+        </scene>
+    </x3d>

@@ -1,0 +1,431 @@
+<x3d>
+    <scene>
+        <group DEF="bloco1"><!--bloco1-->
+        <shape>
+            <appearance>
+                <material diffusecolor="0.7 0.7 0.7"></material>
+            </appearance>
+            <box size="12 5.5 18"></box>
+        </shape>
+        <transform translation="-4 0 12">
+        <shape>
+            <appearance>
+                <material diffusecolor="0.7 0.7 0.7"></material>
+            </appearance>
+            <box size="4 5.5 6"></box>
+        </shape>
+        </transform>
+        <transform translation="-1.4 0 9" rotation="0 1 0 0.6">
+            <shape>
+                <appearance>
+                    <material diffusecolor="0.7 0.7 0.7"></material>
+                </appearance>
+                <box size="6 5.5 4"></box>
+            </shape>
+        </transform>
+
+        <transform  rotation="0 1 0 3.14">
+          <transform translation="-4 0 12">
+        <shape>
+            <appearance>
+                <material diffusecolor="0.7 0.7 0.7"></material>
+            </appearance>
+            <box size="4 5.5 6"></box>
+        </shape>
+        </transform>
+        <transform translation="-1.4 0 9" rotation="0 1 0 0.6">
+            <shape>
+                <appearance>
+                    <material diffusecolor="0.7 0.7 0.7"></material>
+                </appearance>
+                <box size="6 5.5 4"></box>
+            </shape>
+        </transform>
+        </transform>
+        </group>
+
+        <!--bloco2-->
+        <transform translation="-20 0 0">
+            <group USE="bloco1"></group>
+        </transform>
+
+        <!--Espaço entre os blocos-->
+        <transform translation="-4 1.7 0">
+            <shape>
+                <appearance>
+                    <material diffusecolor="0.7 0.7 0.7"></material>
+                </appearance>
+                <box size="20 1 3"></box>
+            </shape>
+        </transform>
+       
+
+        <transform translation='-20 0 0'>
+        <group DEF="janelas">
+            <transform translation='0 -1.2 10.5' rotation="0 1 0 0.6">
+                <shape DEF="janela">
+                    <appearance>
+                        <material diffusecolor="0.24 0.35 0.01" transparency="0.5"></material>
+                    </appearance>
+                    <box size="3 1.2 0.2"></box>
+                </shape>
+            </transform>
+            <transform translation="0 1 10.5"  rotation="0 1 0 0.6">
+                <shape USE="janela"></shape>
+            </transform>
+        </group>
+        </transform>
+        <transform translation="-20.5 0 -20.5">
+            <group USE="janelas"></group>
+        </transform>
+                  
+        
+      <!-- Pilares-->
+      <group DEF="JAN/PILAR">
+       <group DEF="pilares">
+                <group DEF="pilarpronto">
+                <!--Pilar parte lateral-->   
+                <transform translation="7 0 9.2">
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="0.5 5 0.2"></box>
+                    </shape>
+                </transform>
+                <group DEF="pilar"> 
+                <transform  translation="6.882 1.7 9.2" >
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="2 0.5 0.2"></box>
+                    </shape>
+                </transform>
+
+                <transform  translation="6.6 1.4 9.2" rotation="0 0 1 2.355">
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="1 0.5 0.2"></box>
+                    </shape>
+                </transform>
+                <transform  translation="7.369 1.3195 9.2" rotation="0 0 1 -2.355">
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="1 0.5 0.2"></box>
+                    </shape>
+                </transform>
+                </group>
+                <transform translation="0 -2.2 0">
+                <group USE="pilar"></group>
+                </transform>
+                </group>
+                <transform translation="0 0 -4">
+                <group USE="pilarpronto"></group>
+                </transform>
+                  <transform translation="0 0 -8">
+                <group USE="pilarpronto"></group>
+                </transform>
+                  <transform translation="0 0 -12">
+                <group USE="pilarpronto"></group>
+                </transform> 
+                <transform translation="7 -1 0">
+                <shape DEF="enf">
+                    <appearance>
+                        <material diffusecolor="0.2 0.4 0"></material>
+                    </appearance>
+                     <box size="0.3 0.5 18"></box>
+                </shape>
+                </transform>
+                <transform translation="7 1.2 0">
+                    <shape USE="enf"></shape>
+                </transform>
+                 <transform translation="7 1.2 -6">
+                    <shape USE="enf"></shape>
+                </transform>
+                  <transform translation="7 -1 -6">
+                    <shape USE="enf"></shape>
+                </transform>
+                </group>
+                <transform translation="0 0 -16">
+                    <group use="pilarpronto"></group>
+                </transform>
+                 <transform translation="0 0 -20">
+                    <group use="pilarpronto"></group>
+                </transform>
+                 <transform translation="0 0 -24">
+                    <group use="pilarpronto"></group>
+                </transform>
+
+
+
+                  <group DEF="jan2"><!--Grupo com duas janelas-->
+                <transform translation="6 -0.8 7">
+                    <shape DEF='jane'>
+                        <appearance>
+                            <material diffusecolor="0.24 0.35 0.01" transparency="0.5"></material>
+                        </appearance>
+                        <box size='0.2 1.5 3'></box>
+                    </shape>
+                </transform>
+                <transform translation='6 1.2 7'>
+                    <shape USE='jane'></shape>
+                </transform>
+                </group>
+                <transform translation="0 0 -4">
+                <group USE="jan2"></group>
+                </transform>
+                <transform translation="0 0 -8">
+                <group USE="jan2"></group>
+                </transform>
+                <transform translation='8 0 0'>
+               
+                
+               
+                </transform>
+                  <transform translation="0 0 -12">
+                <group USE="jan2"></group>
+                </transform>
+                <transform translation="0 0 -16">
+                <group USE="jan2"></group>
+                </transform>
+                   <transform translation="0 0 -20">
+                <group USE="jan2"></group>
+                </transform>
+               </group>
+
+
+
+               <transform translation="-20 0 0">
+                 <group DEF="JAN/PILAR2">
+       <group DEF="pilares">
+                <group DEF="pilarpronto">
+                <!--Pilar parte lateral-->   
+                <transform translation="7 0 9.2">
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="0.5 5 0.2"></box>
+                    </shape>
+                </transform>
+                <group DEF="pilar"> 
+                <transform  translation="6.882 1.7 9.2" >
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="2 0.5 0.2"></box>
+                    </shape>
+                </transform>
+
+                <transform  translation="6.6 1.4 9.2" rotation="0 0 1 2.355">
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="1 0.5 0.2"></box>
+                    </shape>
+                </transform>
+                <transform  translation="7.369 1.3195 9.2" rotation="0 0 1 -2.355">
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="1 0.5 0.2"></box>
+                    </shape>
+                </transform>
+                </group>
+                <transform translation="0 -2.2 0">
+                <group USE="pilar"></group>
+                </transform>
+                </group>
+                <transform translation="0 0 -4">
+                <group USE="pilarpronto"></group>
+                </transform>
+                  <transform translation="0 0 -8">
+                <group USE="pilarpronto"></group>
+                </transform>
+                  <transform translation="0 0 -12">
+                <group USE="pilarpronto"></group>
+                </transform> 
+                <transform translation="7 -1 0" render='false'>
+                <shape DEF="enf">
+                    <appearance>
+                        <material diffusecolor="0.2 0.4 0" ></material>
+                    </appearance>
+                     <box size="0.3 0.5 8"></box>
+                </shape>
+                </transform>
+                <transform translation="7 1.2 5.2">
+                    <shape USE="enf"></shape>
+                </transform>
+                 <transform translation="7 1.2 -8.8" scale='1 1 1.5'>
+                    <shape USE="enf"></shape>
+                </transform>
+                    <transform translation="7 -1 5.2">
+                    <shape USE="enf"></shape>
+                </transform>
+                 <transform translation="7 -1 -8.8" scale='1 1 1.5'>
+                    <shape USE="enf"></shape>
+                </transform>
+                </group>
+                <transform translation="0 0 -16">
+                    <group use="pilarpronto"></group>
+                </transform>
+                 <transform translation="0 0 -20">
+                    <group use="pilarpronto"></group>
+                </transform>
+                 <transform translation="0 0 -24">
+                    <group use="pilarpronto"></group>
+                </transform>
+
+
+
+                  <group DEF="jan2"><!--Grupo com duas janelas-->
+                <transform translation="6 -0.8 7">
+                    <shape DEF='jane'>
+                        <appearance>
+                            <material diffusecolor="0.24 0.35 0.01" transparency="0.5"></material>
+                        </appearance>
+                        <box size='0.2 1.5 3'></box>
+                    </shape>
+                </transform>
+                <transform translation='6 1.2 7'>
+                    <shape USE='jane'></shape>
+                </transform>
+                </group>
+                <transform translation="0 0 -4">
+                <group USE="jan2"></group>
+                </transform>
+               
+               
+                  <transform translation="0 0 -12">
+                <group USE="jan2"></group>
+                </transform>
+                <transform translation="0 0 -16">
+                <group USE="jan2"></group>
+                </transform>
+                   <transform translation="0 0 -20">
+                <group USE="jan2"></group>
+                </transform>
+               </group>
+               </transform>
+               <transform translation="-20 0 0" rotation="0 1 0 3.14">
+                <group USE="JAN/PILAR"></group>
+               </transform>
+               <transform translation="0 0 0" rotation="0 1 0 3.14">
+                <group USE="JAN/PILAR2"></group>
+               </transform>
+                <transform translation="-24 2.3 15">
+                <shape>
+                    <appearance>
+                        <imagetexture url="../texturas/UNEMAT.PNG"></imagetexture>
+                    </appearance>
+                    <box size="3 0.6 0.2"></box>
+                </shape>
+                </transform>
+                
+                 <transform translation="-24 0.6 15">
+                <shape>
+                    <appearance>
+                        <imagetexture url="../texturas/UNEMATBRASAO.PNG"></imagetexture>
+                    </appearance>
+                    <box size="1.5 1.5 0.2"></box>
+                </shape>
+                </transform>
+                <group DEF='faixa'>
+                <transform  translation="0 1.7 10.5"  rotation="0 1 0 0.6">
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="5 0.5 0.2"></box>
+                    </shape>
+                </transform>            
+                <transform  translation="0 -0.5 10.5"  rotation="0 1 0 0.6">
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="5 0.5 0.2"></box>
+                    </shape>
+                </transform>
+                <transform  translation="4 -0.5 9.2">
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="4 0.5 0.2"></box>
+                    </shape>
+                </transform>  
+                <transform  translation="4 1.7 9.2">
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="4 0.5 0.2"></box>
+                    </shape>
+                </transform>
+                 <transform  translation="-4 1.7 15">
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="4 0.5 0.2"></box>
+                    </shape>
+                </transform>
+                <transform  translation="-4 -0.5 15">
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="4 0.5 0.2"></box>
+                    </shape>
+                </transform>
+                <transform  translation="-2 -0.5 13.1" rotation='0 1 0 1.57'>
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="4 0.5 0.2"></box>
+                    </shape>
+                </transform>
+                <transform  translation="-2 1.7 13.1" rotation='0 1 0 1.57'>
+                    <shape>
+                        <appearance>
+                            <material diffusecolor="0.2 0.4 0"></material>
+                        </appearance>
+                        <box size="4 0.5 0.2"></box>
+                    </shape>
+                </transform> 
+                </group>
+
+
+
+                 <transform translation="-20 0 0">
+                    <group USE="faixa"></group>
+                </transform>
+                <transform translation="-20 0 0" rotation='0 1 0 '>
+                    <group USE="faixa"></group>
+                </transform>
+                <!--Telhado concavo-->
+                <transform translation="-16 2.8 1.5" scale='0.5 0.5 0.2'>
+                    <inline url='../componentes/telhadob1.x3d'></inline>
+                </transform>
+                <!--rampa-->
+                <transform translation="-10 -2.4 0" scale='0.1 0.1 0.1'>
+                    <inline url='../componentes/rampa.x3d'></inline>
+                </transform>
+                 <transform translation="-9 -2.4 0" rotation="0 1 0 1.6" scale='0.3 0.4 0.4'>
+                    <inline url='../componentes/escada.x3d'></inline>
+                </transform>
+                 <transform translation="-9 -2.4 -0.5" rotation="0 1 0 -1.6" scale='0.3 0.35 0.3'>
+                    <inline url='../componentes/escada2.x3d'></inline>
+                </transform>
+    </scene>
+</x3d>

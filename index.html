@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Campus UNEMAT</title>
+        <meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate, Post-Check=0, Pre-Check=0">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+        <script type="text/javascript" src="x3dom/x3dom.js"></script>
+        <link rel="stylesheet" type="text/css" href="x3dom/x3dom.css">
+        <link rel="shortcut icon" href="texturas/favicon.ico">
+        <style>
+            .full {
+                height: 100%;
+                width: 100%;
+            }
+            #menu ul {
+                 padding:0px;
+                 margin:0px;
+                 background-color:#EDEDED;
+                 list-style:none;
+            }
+            #menu ul li { display: inline; }
+        </style>
+        
+
+    </head>
+    <body>
+        <x3d  class="full">
+            <scene>
+                <navigationinfo type='none'></navigationinfo>
+                <directionalLight id="directional" direction='0 -1 0' on ="TRUE" intensity='2.0' shadowIntensity='0.0'>
+                </directionalLight><!--Iluminação e sombras-->
+               
+                <viewpoint id='container' position='-10 1.5 140' orientation='0 1 0 -1.75'></viewpoint><!--visao dos containers-->
+                <viewpoint id='containeraereo' position='10 50 150' orientation='1 0 0 4.8'></viewpoint><!--visao dos containers-->
+                <viewpoint id='administrativo' position="-10 0 120" orientation="0 1 0 1.75"></viewpoint>
+                <viewpoint id='bicicletario' position="-10 0 70" orientation="0 1 0 1.75"></viewpoint><!--Bicicletario-->
+                <viewpoint id='bloco3' position="-10 0 100" orientation="0 1 0 1.65"></viewpoint>
+                <viewpoint id='biblioteca' position='10 0 10' orientation="0 1 0 1.75"></viewpoint>
+                <viewpoint id='secretaria' position='0 0 20'></viewpoint>
+                <viewpoint id='estacionamento' position='0 0 50'></viewpoint>
+                <viewpoint id='palco' position='0 0 50' orientation='0 1 0 3.14'></viewpoint>
+                <viewpoint id='bloco2aerea' position="-40 70 60" orientation="1 0 0 4.8"></viewpoint>
+                <viewpoint id='bloco1e2'  position="-5 0 50" orientation="0 1 0 1.65"></viewpoint>
+                <viewpoint id='bibliotecaaerea' position="-20 70 10" orientation="1 0 0 4.8"></viewpoint>
+                
+                <Switch whichChoice="0" id="switcher">
+                    <transform DEF="CENA1" >
+                        <inline id='secretaria' url="secretaria/secretaria.x3d"></inline>
+                    </tranform>
+                    <transform id='biblioteca' translation="-40 1.25 20" rotation="0 1 0 1.57" DEF="CENA2" id="CENA2"> 
+                        <inline url="biblioteca/biblioteca.x3d"></inline>
+                    </transform>
+                    <transform translation="-44 1.25 40" rotation="0 1 0 1.57" scale="1 1 1.5">
+                        <inline url="bloco1e2/bloco12.x3d"></inline>
+                    </transform>
+                    <transform translation="-52 0 100">
+                        <inline url="blocohistoria/blocohistoria.x3d"></inline>
+                    </transform>
+                    <transform translation='14 0 140' rotation="0 1 0 -1.57">
+                        <inline url="container/container.x3d"></inline>
+                    </transform>
+                    <transform translation='-31 0 132.7' rotation="0 1 0 1.57" > 
+                        <inline url="administrativo/administrativo.x3d"></inline>
+                    </transform>
+                    <transform translation='-10 0 75.7' rotation="0 1 0 1.57" > 
+                        <inline url="ambiente/ambiente.x3d"></inline>
+                    </transform>
+                  
+                </Switch>
+            </scene>
+        </x3d>
+        <nav id='menu'>
+        <ul>
+        <li><button onclick="document.getElementById('container').setAttribute('set_bind','true');">Container</button></li>
+        <li><button onclick="document.getElementById('containeraereo').setAttribute('set_bind','true');">Container aereo</button></li>
+        <li><button onclick="document.getElementById('administrativo').setAttribute('set_bind','true');">Administrativo</button></li>
+        <li><button onclick="document.getElementById('bloco3').setAttribute('set_bind','true');">Bloco 3</button></li>
+        <li><button onclick="document.getElementById('bicicletario').setAttribute('set_bind','true');">bicicletario</button></li>
+		
+        <li><button onclick="document.getElementById('bloco1e2').setAttribute('set_bind','true');">bloco 1 e 2 </button></li>
+        <li><button onclick="document.getElementById('bloco2aerea').setAttribute('set_bind','true');">Bloco 1 e 2 aerea</button></li>
+        <li><button onclick="document.getElementById('biblioteca').setAttribute('set_bind','true');">Biblioteca</button></li>
+        <li><button onclick="document.getElementById('bibliotecaaerea').setAttribute('set_bind','true');">Biblioteca aerea</button></li>
+        <li><button onclick="document.getElementById('secretaria').setAttribute('set_bind','true');">secretaria</button></li>
+        <li><button onclick="document.getElementById('estacionamento').setAttribute('set_bind','true');">estacionamento</button></li>
+        <li><button onclick="document.getElementById('palco').setAttribute('set_bind','true');">palco</button></li>
+        </ul>
+        </nav>
+    </body>
+</html>

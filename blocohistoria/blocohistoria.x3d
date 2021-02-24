@@ -1,0 +1,119 @@
+<x3d>
+    <scene>
+        <shape>
+            <appearance>
+                <material emissivecolor="0.7 0.7 0.7" ></material>
+            </appearance>
+            <box size="44 2.5 6"></box>
+        </shape>
+        <transform translation="2 0 10">
+        <shape>
+            <appearance>
+                <material emissivecolor="0.7 0.7 0.7"></material>
+            </appearance>
+            <box size="48 2.5 6"></box>
+        </shape>
+        </transform>
+        <transform scale='0.45 0.5 0.4' rotation='0 1 0 1.55' translation='26 1.2 15'>
+        <inline url='../componentes/telhado.x3d'></inline>
+        </transform>
+        <transform translation="25 0 2" rotation='0 1 0 -0.8'><!--Haste frontal-->
+        <shape>
+            <appearance>
+                <material  diffusecolor="0.2 0.4 0" ></material>
+            </appearance>
+            <box size="0.4 2.8 0.6"></box>
+        </shape>
+        </transform>
+        <transform translation='26 0.5 10'><!-- Janela Frontal-->
+            <shape>
+            <appearance>
+                <material   diffusecolor="0.24 0.35 0.01" transparency="0.5"></material>
+            </appearance>
+            <box size='0.2 1.2 2.5'></box>
+        </shape>
+        </transform>
+        <transform translation='20 0 -3'><!--Pilares Laterais-->
+        <shape DEF='pilarlat'>
+           <appearance>
+                <material  diffusecolor="0.22 0.22 0.22" ></material>
+            </appearance>
+            <box size="0.3 2.8 0.3"></box>
+            </shape>
+        </transform>
+
+        <transform translation='12 0 -3'>
+        <shape USE='pilarlat'></shape>
+        </transform>
+        <transform translation='4 0 -3'>
+        <shape USE='pilarlat'></shape>
+        </transform>
+        <transform translation='-4 0 -3'>
+        <shape USE='pilarlat'></shape>
+        </transform>
+        <transform translation='-12 0 -3'>
+        <shape USE='pilarlat'></shape>
+        </transform>
+        <transform translation='-20 0 -3'>
+        <shape USE='pilarlat'></shape>
+        </transform>
+        <group DEF='janelate'>
+        <transform translation="19.5 0.8 -3"><!--Janelas Laterais-->
+            <shape DEF='janlat'>
+            <appearance>
+                <material   diffusecolor="0.24 0.35 0.01" transparency="0.5"></material>
+            </appearance>
+            <box size='0.4 0.4 0.2'></box>
+        </shape>
+        </transform>
+         <transform translation="18.9 0.8 -3">
+            <shape USE='janlat'></shape>
+        </transform>
+        <transform translation="18.3 0.8 -3">
+            <shape USE='janlat'></shape>
+        </transform>
+        <transform translation="17.7 0.8 -3">
+            <shape USE='janlat'></shape>
+        </transform>
+        <transform translation="17.1 0.8 -3">
+            <shape USE='janlat'></shape>
+        </transform>
+        <transform translation="16.5 0.8 -3">
+            <shape USE='janlat'></shape>
+        </transform>
+         <transform translation="15.9 0.8 -3">
+            <shape USE='janlat'></shape>
+        </transform>
+        <transform translation="15.3 0.8 -3">
+            <shape USE='janlat'></shape>
+        </transform>
+         <transform translation="14.7 0.8 -3">
+            <shape USE='janlat'></shape>
+        </transform>
+          <transform translation="14.1 0.8 -3">
+            <shape USE='janlat'></shape>
+        </transform>
+            <transform translation="13.5 0.8 -3">
+            <shape USE='janlat'></shape>
+        </transform>
+         <transform translation="12.9 0.8 -3">
+            <shape USE='janlat'></shape>
+        </transform>
+        <transform translation="12.3 0.8 -3">
+            <shape USE='janlat'></shape>
+        </transform>
+        </group>
+        <transform translation='-8 0 0'>
+            <group USE='janelate'></group>
+        </transform>
+         <transform translation='-16 0 0'>
+            <group USE='janelate'></group>
+        </transform>
+         <transform translation='-24 0 0'>
+            <group USE='janelate'></group>
+        </transform>
+         <transform translation='-32 0 0'>
+            <group USE='janelate'></group>
+        </transform>
+    </scene>
+</x3d>
