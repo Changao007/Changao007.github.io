@@ -1,0 +1,70 @@
+<html>
+    <head>RISC 360</head>
+    <body>
+        <div class='video' id='videooculto' style="display: none;">
+            <video src="texturas/CampusBloco1 (1).mp4" type='video/mp4; codecs="theora, vorbis"'></video>
+            </div>
+        <script src="/build/three.js"></script>
+      <script src="/build/three.interaction.js"></script>
+        <script type='module'>
+            import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.123/examples/jsm/controls/OrbitControls.js';
+            const scene =  new THREE.Scene;
+            
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer();
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            document.body.appendChild( renderer.domElement );
+            var interaction = new THREE.Interaction(renderer, scene, camera);
+            //geometrias
+            const geometria = new THREE.BoxGeometry();
+            const material = new THREE.MeshBasicMaterial({color: 0xaaaaaa});
+            const cube = new THREE.Mesh(geometria, material);
+            cube.cursor = 'pointer';
+            cube.name = 'cubo';
+            scene.add(cube);
+
+            cube.on('pointerdown', function(ev) {
+                
+          escondervideo(document.querySelector('#videooculto'));
+          console.log('%c' + cube.name + '%c => pointerdown', 'color: #fff; background: #41b882; padding: 3px 4px;', 'color: #41b882; background: #fff;');
+        });
+         cube.on('click', function(ev) {
+          escondervideo(document.querySelector('videooculto'));
+        });
+        
+            camera.position.z=5;
+            camera.lookAt (new THREE.Vector3(0,0,0));
+            const controls = new OrbitControls( camera, renderer.domElement );
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.25;
+            controls.enableZoom = true;
+            controls.autoRotate = false;
+
+          
+      
+            function animate()
+            {
+                controls.update();
+                requestAnimationFrame ( animate ); 
+               
+                renderer.render (scene, camera);
+            }
+          
+            animate();
+
+            function escondervideo(el) {
+                console.log(el)
+	        if(el.style.display == "block")
+		        //document.getElementById(el).style.display = 'none';
+		        el.style.display='none'
+	        else
+            //document.getElementById(el).style.display = 'block';
+            el.style.display='block'
+		//document.getElementById(el).setAttribute('display','block')
+}
+        </script>
+        
+      
+        
+    </body>
+</html>
